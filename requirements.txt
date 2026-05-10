@@ -1,0 +1,5 @@
+markitdown
+rich
+pyperclip
+watchdog
+openai

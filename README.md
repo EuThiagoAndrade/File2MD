@@ -1,2 +1,90 @@
-# File2MD
-Este script é um "wrapper" em Python para a ferramenta **MarkItDown**, projetado para facilitar a conversão de diversos formatos de arquivos para Markdown de maneira rápida e organizada, com suporte a limpeza de metadados e menu interativo.
+# File2MD - Manual de Utilização
+
+Este script é um "wrapper" em Python para a ferramenta **MarkItDown**, projetado para facilitar a conversão de diversos formatos de arquivos para Markdown de maneira rápida e organizada.
+
+---
+
+## Pré-requisitos
+
+Para utilizar este script, você precisa de:
+1.  **Python** instalado na sua máquina (versão 3.7+).
+2.  **MarkItDown** e outras dependências.
+
+### Instalação
+
+Clone o repositório e instale as dependências:
+
+```powershell
+git clone https://github.com/EuThiagoAndrade/File2MD.git
+cd File2MD
+pip install -r requirements.txt
+```
+
+> [!TIP]
+> **Descoberta Automática:** O script é inteligente! Ele tentará encontrar o MarkItDown sozinho no seu sistema ou em pastas `.venv` e `venv` próximas. Se não encontrar, ele solicitará o caminho na primeira execução e salvará a configuração para que você não precise digitar novamente.
+
+---
+
+## Como Executar
+
+O script oferece dois modos principais de operação: **Menu Interativo** e **Linha de Comando (CLI)**.
+
+### 1. Modo Menu Interativo (Recomendado)
+Execute o script sem argumentos para abrir a interface visual:
+
+```powershell
+python File2MD.py
+```
+
+**Funcionalidades do Menu:**
+*   **Interface Visual**: Design inspirado em terminais modernos com navegação por setas (**↑** e **↓**).
+*   **1. Converter Arquivo Único**: Suporte a URLs, PDFs, Office, Imagens, Áudio e mais.
+*   **2. Converter Pasta em Lote**: Agora com **processamento paralelo (multi-threading)** para alta performance.
+*   **3. Monitorar Pasta (Watcher Mode)**: O script vigia uma pasta e converte novos arquivos automaticamente.
+*   **4. Converter do Clipboard**: Detecta caminhos ou URLs copiados na sua área de transferência.
+*   **5. Preview Integrado**: Visualize o Markdown gerado diretamente no terminal com formatação rica.
+*   **6. Configuração de IA**: Integre com OpenAI ou modelos locais para descrição de imagens e áudio.
+*   **7. Limpeza de Metadados YAML**: Controle visual se os metadados serão removidos ou mantidos.
+*   **8. Definir Pasta de Saída**: Configuração de pasta padrão para salvar os arquivos gerados.
+
+---
+
+### 2. Modo Linha de Comando (CLI)
+Para uso rápido ou em automações.
+
+| Comando | Descrição |
+| :--- | :--- |
+| `python File2MD.py "arquivo.pdf"` | Converte o arquivo com limpeza de cabeçalho padrão. |
+| `python File2MD.py "C:\Pasta" -d` | Processamento paralelo em lote de uma pasta inteira. |
+| `python File2MD.py "C:\Entrada" --watch` | Inicia o monitoramento em tempo real (Watcher Mode). |
+| `python File2MD.py "doc.docx" --keep-header` | Converte mantendo os metadados originais. |
+
+---
+
+## Inteligência e Configuração
+
+O script agora gerencia as configurações de forma dinâmica:
+
+*   **Arquitetura Nativa**: Agora utiliza a API Python do MarkItDown diretamente para maior estabilidade.
+*   **Configuração Avançada**: Salva chaves de IA e preferências no `file2md_config.json`.
+*   **Correção de Caracteres (Encoding)**: Suporte robusto para Windows, corrigindo problemas com acentuação.
+*   **Limpeza Inteligente 2.0**: Remove Front Matter, normaliza quebras de linha e remove espaços residuais.
+*   **Multimodal**: Suporte para descrever imagens e transcrever áudio via integração com LLMs.
+*   **Flexibilidade Total**: Se o script for movido para outra máquina ou diretório, ele saberá se reajustar.
+
+---
+
+## Referência de Parâmetros
+
+Se você preferir não usar o menu e invocar o script diretamente via terminal, aqui estão todos os parâmetros disponíveis:
+
+| Parâmetro | Descrição | Exemplo de Uso |
+| :--- | :--- | :--- |
+| `input` | (Posicional) O arquivo, pasta ou URL que você deseja converter. | `python File2MD.py "doc.pdf"` |
+| `-o`, `--output` | Especifica o nome ou caminho do arquivo de saída. | `python File2MD.py "doc.pdf" -o "final.md"` |
+| `-d`, `--directory` | Indica que o input é uma pasta e deve converter tudo nela. | `python File2MD.py "C:\Docs" -d` |
+| `--watch` | Inicia o monitoramento de uma pasta em tempo real. | `python File2MD.py "C:\Docs" --watch` |
+| `--keep-header` | Pula a limpeza automática e mantém o cabeçalho YAML original. | `python File2MD.py "doc.pdf" --keep-header` |
+| `-h`, `--help` | Mostra a ajuda oficial do script com todos os comandos. | `python File2MD.py --help` |
+
+---
