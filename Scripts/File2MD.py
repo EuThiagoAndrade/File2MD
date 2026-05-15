@@ -66,7 +66,7 @@ custom_theme = Theme({
 console = Console(theme=custom_theme)
 
 # Arquivo de configuração persistente
-CONFIG_FILE = Path(__file__).parent / "file2md_config.json"
+CONFIG_FILE = Path(__file__).parent.parent / "config" / "file2md_config.json"
 
 def load_config():
     """Carrega as configurações do arquivo JSON."""

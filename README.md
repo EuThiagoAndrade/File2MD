@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".assets/Logo_branco.svg">
+    <source media="(prefers-color-scheme: light)" srcset=".assets/Logo_preto.svg">
+    <img alt="File2MD Logo" src=".assets/Logo_preto.svg" width="400">
+  </picture>
+</p>
+
 # File2MD - Manual de Utilização
 
 Este script é um "wrapper" em Python para a ferramenta **MarkItDown**, projetado para facilitar a conversão de diversos formatos de arquivos para Markdown de maneira rápida e organizada.
@@ -33,7 +41,7 @@ O script oferece dois modos principais de operação: **Menu Interativo** e **Li
 Execute o script sem argumentos para abrir a interface visual:
 
 ```powershell
-python File2MD.py
+python Scripts/File2MD.py
 ```
 
 **Funcionalidades do Menu:**
@@ -54,10 +62,10 @@ Para uso rápido ou em automações.
 
 | Comando | Descrição |
 | :--- | :--- |
-| `python File2MD.py "arquivo.pdf"` | Converte o arquivo com limpeza de cabeçalho padrão. |
-| `python File2MD.py "C:\Pasta" -d` | Processamento paralelo em lote de uma pasta inteira. |
-| `python File2MD.py "C:\Entrada" --watch` | Inicia o monitoramento em tempo real (Watcher Mode). |
-| `python File2MD.py "doc.docx" --keep-header` | Converte mantendo os metadados originais. |
+| `python Scripts/File2MD.py "arquivo.pdf"` | Converte o arquivo com limpeza de cabeçalho padrão. |
+| `python Scripts/File2MD.py "C:\Pasta" -d` | Processamento paralelo em lote de uma pasta inteira. |
+| `python Scripts/File2MD.py "C:\Entrada" --watch` | Inicia o monitoramento em tempo real (Watcher Mode). |
+| `python Scripts/File2MD.py "doc.docx" --keep-header` | Converte mantendo os metadados originais. |
 
 ---
 
@@ -80,11 +88,11 @@ Se você preferir não usar o menu e invocar o script diretamente via terminal, 
 
 | Parâmetro | Descrição | Exemplo de Uso |
 | :--- | :--- | :--- |
-| `input` | (Posicional) O arquivo, pasta ou URL que você deseja converter. | `python File2MD.py "doc.pdf"` |
-| `-o`, `--output` | Especifica o nome ou caminho do arquivo de saída. | `python File2MD.py "doc.pdf" -o "final.md"` |
-| `-d`, `--directory` | Indica que o input é uma pasta e deve converter tudo nela. | `python File2MD.py "C:\Docs" -d` |
-| `--watch` | Inicia o monitoramento de uma pasta em tempo real. | `python File2MD.py "C:\Docs" --watch` |
-| `--keep-header` | Pula a limpeza automática e mantém o cabeçalho YAML original. | `python File2MD.py "doc.pdf" --keep-header` |
-| `-h`, `--help` | Mostra a ajuda oficial do script com todos os comandos. | `python File2MD.py --help` |
+| `input` | (Posicional) O arquivo, pasta ou URL que você deseja converter. | `python Scripts/File2MD.py "doc.pdf"` |
+| `-o`, `--output` | Especifica o nome ou caminho do arquivo de saída. | `python Scripts/File2MD.py "doc.pdf" -o "final.md"` |
+| `-d`, `--directory` | Indica que o input é uma pasta e deve converter tudo nela. | `python Scripts/File2MD.py "C:\Docs" -d` |
+| `--watch` | Inicia o monitoramento de uma pasta em tempo real. | `python Scripts/File2MD.py "C:\Docs" --watch` |
+| `--keep-header` | Pula a limpeza automática e mantém o cabeçalho YAML original. | `python Scripts/File2MD.py "doc.pdf" --keep-header` |
+| `-h`, `--help` | Mostra a ajuda oficial do script com todos os comandos. | `python Scripts/File2MD.py --help` |
 
 ---
