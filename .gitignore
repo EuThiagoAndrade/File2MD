@@ -1,23 +1,33 @@
-# Python
+# ==============================================================================
+# File2MD Git Ignore Configuration
+# ==============================================================================
+
+# Python Caches & Compiled files
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+
+# Virtual Environments
 .venv/
 venv/
 ENV/
+env/
 
-# Configuration
-file2md_config.json
-
-# IDEs
+# IDEs & Editors
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# OS
+# Operating System Files
+.DS_Store
 Thumbs.db
 Desktop.ini
-.DS_Store
 
-# Output files
-*.md
+# Project Specific
+file2md_config.json
+
+# Output Files Exceptions
 !README.md
+

@@ -1,0 +1,47 @@
+name: 🐛 Bug Report
+description: Relatar uma falha ou regressão técnica no File2MD
+title: "[FIX] Verbo no infinitivo ..."
+labels: ["bug"]
+body:
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Descrição do bug
+      description: O que aconteceu e qual o comportamento esperado?
+      placeholder: Ex: Ao rodar em modo monitoramento de pasta, a conversão falha com UnicodeDecodeError...
+    validations:
+      required: true
+  - type: textarea
+    id: evidences
+    attributes:
+      label: Evidências
+      description: Log de erro do console ou passos para reproduzir o problema.
+      placeholder: Passo a passo para reprodução e trace de exceção...
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidade
+      options:
+        - "🔴 Crítico (bloqueia o uso da aplicação)"
+        - "🟡 Moderado (afeta funcionamento específico mas tem workaround)"
+        - "🟢 Baixo (cosmético, estética do terminal)"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas adicionais
+      placeholder: Ex: Testado no terminal do Windows (cmd.exe) e PowerShell Core...
+    validations:
+      required: false
+  - type: textarea
+    id: reference_plan
+    attributes:
+      label: 📋 Plano de Referência
+      description: Caminho para o arquivo do plano local que detalha a arquitetura.
+      value: |
+        Arquivo local: `.agent/plans/NomeDoPlano.md`
+    validations:
+      required: false

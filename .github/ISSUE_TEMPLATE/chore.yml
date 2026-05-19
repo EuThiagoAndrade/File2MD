@@ -1,0 +1,52 @@
+name: ⚙️ Chore (Technical Task)
+description: Tarefas de manutenção, refatoração, testes, dependências ou infraestrutura
+title: "[CHORE] Verbo no infinitivo ..."
+labels: ["chore"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Objetivo
+      description: O que esta manutenção técnica realiza?
+      placeholder: Ex: Adicionar suite de testes para CLI, atualizar dependência markitdown...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo
+      description: O que está contemplado e o que explicitamente não está?
+      value: |
+        ### ✅ Dentro do Escopo
+        - 
+        - 
+
+        ### ❌ Fora do Escopo
+        - 
+        - 
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto
+      description: Qual o impacto desta mudança no código ou comportamento geral?
+      placeholder: Ex: Aumentará a cobertura de testes locais de 0% para 40%...
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas / Evidências
+      placeholder: Notas de contexto técnico adicional...
+    validations:
+      required: false
+  - type: textarea
+    id: reference_plan
+    attributes:
+      label: 📋 Plano de Referência
+      description: Caminho para o arquivo do plano local que detalha a arquitetura.
+      value: |
+        Arquivo local: `.agent/plans/NomeDoPlano.md`
+    validations:
+      required: false

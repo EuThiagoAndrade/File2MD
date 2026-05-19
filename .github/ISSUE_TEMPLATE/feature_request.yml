@@ -1,0 +1,59 @@
+name: 🚀 Feature Request
+description: Propor uma nova funcionalidade ou melhoria técnica para o File2MD
+title: "[FEATURE] Verbo no infinitivo ..."
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por propor uma melhoria para o File2MD! Por favor, preencha os campos abaixo.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Objetivo
+      description: O que esta funcionalidade realiza e por que ela é importante?
+      placeholder: Ex: Permitir a conversão de arquivos de e-mail (.msg) para que possamos catalogar correspondências...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo (Dentro / Fora)
+      description: O que está contemplado e o que explicitamente não está?
+      value: |
+        ### ✅ Dentro do Escopo
+        - 
+        - 
+
+        ### ❌ Fora do Escopo
+        - 
+        - 
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Critérios de Aceite
+      description: Condições específicas e testáveis para dar a tarefa como concluída.
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: technical_detail
+    attributes:
+      label: Detalhamento Técnico / Arquitetura
+      description: Detalhes de implementação, novas flags CLI e telas TUI a serem modificadas.
+      placeholder: Ex: Adicionar flag --msg, alterar a função principal para incluir parser de e-mail...
+    validations:
+      required: false
+  - type: textarea
+    id: reference_plan
+    attributes:
+      label: 📋 Plano de Referência
+      description: Caminho para o arquivo do plano local que detalha a arquitetura.
+      value: |
+        Arquivo local: `.agent/plans/NomeDoPlano.md`
+    validations:
+      required: false
