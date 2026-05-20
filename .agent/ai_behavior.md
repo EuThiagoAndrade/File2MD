@@ -56,5 +56,5 @@ Este arquivo define regras mandatórias para qualquer agente ou modelo de IA (An
 ## 9. Protocolo de Planejamento (Source of Truth)
 - **Complexidade exige Plano**: Qualquer tarefa que afete mais de 2 arquivos ou altere a lógica de fluxo do sistema DEVE iniciar pelo workflow `@[/rascunhar_plano]`.
 - **Gate de Qualidade**: O agente não deve criar issues (`@[/criar_issues]`) baseadas em rascunhos. O plano deve estar com `Status: Aprovado` após passar pelo `@[/revisar_plano]`.
-- **Rastreabilidade Local**: O arquivo em `.agent/plans/` é a autoridade máxima de implementação. Se houver divergência entre o que o usuário disse no passado e o que está no plano Aprovado, o plano prevalece (ou deve ser revisado).
+- **Rastreabilidade Local**: O arquivo em `backup/Plan/` é a autoridade máxima de implementação. Se houver divergência entre o que o usuário disse no passado e o que está no plano Aprovado, o plano prevalece (ou deve ser revisado).
 - **Template Canônico**: O plano DEVE seguir o template em `.agent/templates/plano_implementacao.md`. Seções do template não devem ser omitidas.

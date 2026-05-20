@@ -37,11 +37,11 @@ Verificação de integridade e sincronia entre workflows, skills, templates e do
 **Referências cruzadas entre workflows:**
 - [ ] `implementar_issue.md` referencia `@[/criar_issues]` no fallback de rastreabilidade?
 - [ ] `criar_issues.md` menciona a seção `📋 Plano de Referência` que o `implementar_issue.md` espera encontrar?
-- [ ] Todos os workflows referenciam `.agent/plans/` como diretório de planos?
+- [ ] Todos os workflows referenciam `backup/Plan/` e `backup/Executados/` como diretório de planos?
 
 **Consistência do protocolo SoT:**
 - [ ] `criar_issues.md` e `implementar_issue.md` definem a mesma estrutura mínima para planos (`Objetivo`, `Escopo`, `Critérios de Aceite`)?
-- [ ] A skill `python-cli-architect.md` referencia `.agent/plans/` como fonte de verdade?
+- [ ] A skill `python-cli-architect.md` referencia `backup/Plan/` como fonte de verdade?
 - [ ] `criar_issues.md` e `implementar_issue.md` validam o `Status: Aprovado` antes de agir?
 - [ ] `revisar_plano.md` e `rascunhar_plano.md` utilizam os status padronizados (`Rascunho`, `Em Revisão`, `Aprovado`)?
 - [ ] `rascunhar_plano.md` e `revisar_plano.md` referenciam `.agent/templates/plano_implementacao.md` como leitura obrigatória?
@@ -85,16 +85,16 @@ Verificação de integridade e sincronia entre workflows, skills, templates e do
 
 ---
 
-## 5. Saúde da Pasta `.agent/plans/`
+## 5. Saúde de `backup/Plan/` e `backup/Executados/`
 
 **Planos pendentes:**
-- [ ] Listar todos os arquivos em `.agent/plans/` (excluindo `completed/`).
+- [ ] Listar todos os arquivos em `backup/Plan/`.
 - [ ] Algum plano tem mais de **30 dias** sem issue associada? (stale ⚠️)
-- [ ] Algum plano contém `#ID` no nome mas a issue correspondente está `closed`? (sugerir mover para `completed/`).
+- [ ] Algum plano contém `#ID` no nome mas a issue correspondente está `closed`? (sugerir mover para `backup/Executados/`).
 
 **Planos executados:**
-- [ ] Listar arquivos em `.agent/plans/completed/`.
-- [ ] Os planos em `completed/` possuem bloco de "Pós-Mortem"?
+- [ ] Listar arquivos em `backup/Executados/`.
+- [ ] Os planos em `backup/Executados/` possuem bloco de "Pós-Mortem"?
 
 ---
 
@@ -127,7 +127,7 @@ Após completar todas as seções, apresente o relatório neste formato:
 2. Sincronia Workflows:   ✅ OK | ⚠️ N problemas
 3. Sincronia Skills:      ✅ OK | ⚠️ N problemas
 4. Templates vs Workflows:✅ OK | ⚠️ N problemas
-5. Pasta .agent/plans/:   ✅ OK | ⚠️ N problemas
+5. Pasta backup/Plan/:   ✅ OK | ⚠️ N problemas
 6. ai_behavior.md:        ✅ OK | ⚠️ N problemas
 7. Documentação (README): ✅ OK | ⚠️ N problemas
 

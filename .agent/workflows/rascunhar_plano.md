@@ -7,14 +7,14 @@ description: Preencher o Template de Plano de Implementação (V2.0) a partir de
 
 # Rascunhador de Plano de Implementação
 
-Este workflow preenche o **Template V2.0** com base em uma demanda informada pelo usuário. O resultado é um rascunho em `.agent/plans/` pronto para ser revisado pelo workflow `@[/revisar_plano]`.
+Este workflow preenche o **Template V2.0** com base em uma demanda informada pelo usuário. O resultado é um rascunho em `backup/Plan/` pronto para ser revisado pelo workflow `@[/revisar_plano]`.
 
 > **Responsabilidade deste workflow:** produzir um rascunho completo e estruturado. A crítica de qualidade é responsabilidade exclusiva do `@[/revisar_plano]`. Não tente corrigir o que você escreveu — escreva o melhor rascunho possível e pare.
 
 ## Regras Gerais
 
 - **NUNCA** salve o arquivo sem apresentar o rascunho completo ao usuário primeiro (Passo 5).
-- Este workflow **não cria issues e não abre PR**. Seu único output é um arquivo `.md` em `.agent/plans/`.
+- Este workflow **não cria issues e não abre PR**. Seu único output é um arquivo `.md` em `backup/Plan/`.
 - Se a demanda for vaga demais para preencher o Passo 3 com segurança, **PARE** e faça perguntas de clarificação antes de continuar.
 - **PROIBIDO** inventar arquivos, funções ou comportamentos que não existam no codebase atual.
 
@@ -30,7 +30,7 @@ Antes de qualquer escrita, colete o contexto necessário:
 - Classifique a prioridade inicial: `🔴 P1` | `🟠 P2` | `🟡 P3` | `🟢 P4`.
 
 **b) Verifique se já existe um plano relacionado:**
-- Liste `.agent/plans/` buscando planos com palavras-chave da demanda.
+- Liste `backup/Plan/` buscando planos com palavras-chave da demanda.
 - Se existir plano relacionado, leia-o e use-o como contexto adicional — **nunca duplique** um plano existente sem motivo.
 
 **c) Leia os arquivos relevantes do codebase:**
@@ -53,7 +53,7 @@ Antes de qualquer escrita, colete o contexto necessário:
 Defina o nome do arquivo de saída seguindo a convenção:
 
 ```
-.agent/plans/<NomeCurtoDescritivo>.md
+backup/Plan/<NomeCurtoDescritivo>.md
 ```
 
 **Regras de nomenclatura:**
@@ -184,7 +184,7 @@ Volte ao cabeçalho (Passo 2) e preencha a `Prioridade de Execução` com a orde
 Apresente o rascunho completo no chat (em bloco de código markdown) e informe:
 - Quantos itens técnicos foram definidos.
 - Quantas issues serão criadas.
-- Qual arquivo será salvo em `.agent/plans/`.
+- Qual arquivo será salvo em `backup/Plan/`.
 - Se alguma seção ficou incompleta e por quê.
 
 **Aguarde** aprovação explícita do usuário antes de salvar o arquivo.
@@ -196,7 +196,7 @@ Apresente o rascunho completo no chat (em bloco de código markdown) e informe:
 ## 8. Salvamento do Arquivo
 
 Após aprovação:
-1. Salve o arquivo **localmente** em `.agent/plans/<NomeCurtoDescritivo>.md` usando a ferramenta de criação/escrita de arquivos do workspace.
+1. Salve o arquivo **localmente** em `backup/Plan/<NomeCurtoDescritivo>.md` usando a ferramenta de criação/escrita de arquivos do workspace.
 2. **PROIBIDO** usar `push_files` ou `create_or_update_file` do MCP para salvar na branch padrão — isso commitaria diretamente no GitHub sem PR.
 
 ---

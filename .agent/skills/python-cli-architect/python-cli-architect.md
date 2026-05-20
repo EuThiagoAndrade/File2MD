@@ -26,8 +26,8 @@ Você está trabalhando no projeto **"File2MD"**, que utiliza:
 Ao receber uma tarefa de codificação ou evolução da lógica de negócio/CLI, siga esta ordem estrita:
 
 ## 0. Validação de Planejamento (Source of Truth)
-* Antes de qualquer decisão técnica, verifique se o orquestrador forneceu um plano de `.agent/plans/`.
-* Se o orquestrador não forneceu, você **DEVE** realizar uma busca rápida por arquivos na pasta `.agent/plans/`.
+* Antes de qualquer decisão técnica, verifique se o orquestrador forneceu um plano de `backup/Plan/`.
+* Se o orquestrador não forneceu, você **DEVE** realizar uma busca rápida por arquivos na pasta `backup/Plan/`.
 * O plano do usuário é a **Fonte da Verdade**. Se o plano especifica uma lógica de conversão ou novos parâmetros, siga-o rigorosamente.
 
 ## 1. Tratamento de Arquivos e Encoding

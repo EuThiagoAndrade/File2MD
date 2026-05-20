@@ -29,9 +29,9 @@ Extraia e registre:
 - critérios de aceite, dependências, blockers, notas, evidências e referências.
 
 **Auditoria de Planos Locais (Source of Truth):**
-- Antes de prosseguir para o planejamento, o agente **DEVE** listar a pasta `.agent/plans/` buscando por arquivos que contenham o número da issue (`#<numero>`) ou palavras-chave do título.
+- Antes de prosseguir para o planejamento, o agente **DEVE** listar a pasta `backup/Plan/` buscando por arquivos que contenham o número da issue (`#<numero>`) ou palavras-chave do título.
 - Se um plano for encontrado, ele deve ser lido integralmente e passará a ser a **Fonte da Verdade (SoT)** para todas as decisões técnicas subsequentes.
-- **Fallback de rastreabilidade:** Se a busca por `#ID` em `.agent/plans/` não retornar resultados, verificar também o campo `📋 Plano de Referência` no corpo da issue (via MCP). Esse campo é inserido pelo workflow `@[/criar_issues]` e contém o path do plano original.
+- **Fallback de rastreabilidade:** Se a busca por `#ID` em `backup/Plan/` não retornar resultados, verificar também o campo `📋 Plano de Referência` no corpo da issue (via MCP). Esse campo é inserido pelo workflow `@[/criar_issues]` e contém o path do plano original.
 
 **Validação de Status e Sequência:**
 - O agente **DEVE** verificar se o plano possui `Status: Aprovado`. Se estiver como `Rascunho`, recomende a revisão primeiro.
@@ -48,7 +48,7 @@ Antes de editar arquivos, produza um checklist curto de execução no `task.md` 
 - itens obrigatórios e itens fora de escopo.
 
 **Regra de Complexidade (ai_behavior.md §9):**
-- Se a issue afetar **mais de 2 arquivos** e **não houver plano local** em `.agent/plans/`:
+- Se a issue afetar **mais de 2 arquivos** e **não houver plano local** em `backup/Plan/`:
   **PARE** e sugira ao usuário: *"Esta issue afeta N arquivos. Recomendo criar um plano com `@[/rascunhar_plano]` antes de prosseguir."*
 - Se o usuário autorizar prosseguir sem plano, registre o aviso no `task.md`.
 
@@ -123,7 +123,7 @@ Execute este bloco se a issue exigir painéis de console, spinners de progresso,
 - fechamento da issue: `Closes #<numero>` ou `Resolves #<numero>`;
 - resumo do que foi implementado e validações executadas;
 - resultado do `@governance-check`: `STATUS: APROVADO` ou `STATUS: REPROVADO — justificativa aceita`;
-- status do plano local: informar se o plano em `.agent/plans/` foi totalmente atendido.
+- status do plano local: informar se o plano em `backup/Plan/` foi totalmente atendido.
 
 ---
 
@@ -136,9 +136,9 @@ PAUSE a execução. Apresente o link do PR (ou a intenção de criá-lo, caso ap
 
 ## 7. Manutenção de Planos (Finalização)
 
-Após a aprovação do usuário e conclusão da tarefa, o agente deve mover o arquivo de plano de `.agent/plans/` para `.agent/plans/completed/`, mantendo a pasta de pendências limpa.
+Após a aprovação do usuário e conclusão da tarefa, o agente deve mover o arquivo de plano de `backup/Plan/` para `backup/Executados/`, mantendo a pasta de pendências limpa.
 
-**Pós-Mortem Automático:** Ao mover o plano para `completed/`, o agente **DEVE** adicionar um bloco de fechamento abaixo no final do arquivo:
+**Pós-Mortem Automático:** Ao mover o plano para `backup/Executados/`, o agente **DEVE** adicionar um bloco de fechamento abaixo no final do arquivo:
 
 ```markdown
 ---

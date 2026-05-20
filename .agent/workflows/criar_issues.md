@@ -21,7 +21,7 @@ Siga este workflow para criar novas issues no repositório, garantindo planejame
 - `chore`: manutenção técnica, refatoração, dependências ou testes.
 
 **Busca de Contexto (SoT):**
-- O agente **DEVE** listar a pasta `.agent/plans/` para verificar se existe um documento de planejamento relacionado à demanda.
+- O agente **DEVE** listar a pasta `backup/Plan/` para verificar se existe um documento de planejamento relacionado à demanda.
 - Caso um plano exista, ele deve ser lido integralmente e usado como a base primária para a criação das issues.
 
 **Validação de Status do Plano:**
@@ -78,7 +78,7 @@ O corpo da issue **DEVE** usar como esqueleto os campos extraídos no Passo 1. C
 - Se um plano local foi utilizado, o corpo de **cada issue** DEVE incluir uma seção de referência **ao final**:
     ```markdown
     ### 📋 Plano de Referência
-    Arquivo local: `.agent/plans/<nome_do_arquivo>.md`
+    Arquivo local: `backup/Plan/<nome_do_arquivo>.md`
     ```
 
 ---
@@ -97,7 +97,7 @@ Após obter a aprovação final:
 - **PROIBIDO:** usar terminal, scripts de linha de comando ou a CLI do GitHub (`gh`) para criar a issue quando o MCP estiver disponível.
 - **Rastreabilidade Automática:** Após a criação, o agente **DEVE**:
     1. Obter o(s) número(s) da(s) issue(s) gerada(s).
-    2. **Renomear** o arquivo original em `.agent/plans/` para incluir os números (ex: `MeuPlano.md` → `MeuPlano_#40_#41.md`).
+    2. **Renomear** o arquivo original em `backup/Plan/` para incluir os números (ex: `MeuPlano.md` → `MeuPlano_#40_#41.md`).
        - **Procedimento de rename:** Use a ferramenta **local** de criação de arquivo para salvar com o novo nome e depois delete o arquivo antigo.
     3. Atualizar o corpo das issues no GitHub com o novo nome do arquivo de referência (na seção `📋 Plano de Referência`) via MCP (`issue_write/update`).
     4. Confirmar que **cada issue criada** contém a seção de referência correta.

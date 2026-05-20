@@ -7,7 +7,7 @@ description: Revisão crítica e refinamento do Plano de Implementação (V2.0) 
 
 # Revisor Crítico de Plano de Implementação
 
-Este workflow recebe um rascunho produzido pelo `@[/rascunhar_plano]`, aplica uma revisão crítica sistemática e entrega uma versão refinada e aprovável. O output é o **mesmo arquivo** atualizado em `.agent/plans/`, mais completo, preciso e sem ambiguidades.
+Este workflow recebe um rascunho produzido pelo `@[/rascunhar_plano]`, aplica uma revisão crítica sistemática e entrega uma versão refinada e aprovável. O output é o **mesmo arquivo** atualizado em `backup/Plan/`, mais completo, preciso e sem ambiguidades.
 
 > **Responsabilidade deste workflow:** questionar tudo, validar cada seção contra o codebase, e elevar a qualidade do plano ao nível de Source of Truth (SoT) válido para `@[/criar_issues]` e `@[/implementar_issue]`.
 
@@ -25,8 +25,8 @@ Este workflow recebe um rascunho produzido pelo `@[/rascunhar_plano]`, aplica um
 **a) Se o usuário indicou o arquivo:** leia diretamente o path informado.
 
 **b) Se o usuário não indicou o arquivo:**
-- Liste `.agent/plans/` e identifique o arquivo mais recente.
-- Apresente ao usuário: *"Vou revisar o plano `.agent/plans/<nome>.md`. Confirme ou indique outro arquivo."*
+- Liste `backup/Plan/` e identifique o arquivo mais recente.
+- Apresente ao usuário: *"Vou revisar o plano `backup/Plan/<nome>.md`. Confirme ou indique outro arquivo."*
 - **Aguarde** confirmação antes de prosseguir.
 
 **c) Leia o plano completo** antes de iniciar qualquer revisão.
@@ -163,7 +163,7 @@ Apresente:
 ## 7. Salvamento da Versão Revisada
 
 Após aprovação:
-1. Atualize o arquivo existente em `.agent/plans/<nome>.md` **localmente** usando a ferramenta de edição/escrita de arquivos do workspace.
+1. Atualize o arquivo existente em `backup/Plan/<nome>.md` **localmente** usando a ferramenta de edição/escrita de arquivos do workspace.
 2. **PROIBIDO** usar `create_or_update_file` ou `push_files` do MCP para salvar na branch padrão.
 3. Altere o `**Status:**` do cabeçalho de `Rascunho` para `Em Revisão` (se aprovado com ressalvas) ou `Aprovado` (se aprovação plena).
 4. Atualize a `**Última atualização:**` para a data atual.
@@ -174,4 +174,4 @@ Após aprovação:
 
 Após salvar a versão revisada, fornece o handoff explícito:
 > "Para criar as issues deste plano, chame: `@[/criar_issues]`
-> O agente irá ler `.agent/plans/<nome>.md` como SoT e usar a seção **Decomposição em Issues** como entrada."
+> O agente irá ler `backup/Plan/<nome>.md` como SoT e usar a seção **Decomposição em Issues** como entrada."

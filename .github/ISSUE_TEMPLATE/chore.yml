@@ -47,6 +47,6 @@ body:
       label: 📋 Plano de Referência
       description: Caminho para o arquivo do plano local que detalha a arquitetura.
       value: |
-        Arquivo local: `.agent/plans/NomeDoPlano.md`
+        Arquivo local: `backup/Plan/NomeDoPlano.md`
     validations:
       required: false
