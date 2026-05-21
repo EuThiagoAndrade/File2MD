@@ -25,10 +25,10 @@
 - [x] **4. Auditoria Obrigatória (Governance)**
     - [x] Executar smoke test / testes locais: Executado suite de testes do python (8 testes passando).
     - [x] Validar integridade com `@governance-check` (ou regras equivalentes): Validado manualmente a inexistência de quebras de imports ou problemas de codificação. Modificações respeitando o estilo estrito do projeto.
-- [ ] **5. Commit e Pull Request**
-    - [ ] Criar commits estruturados
-    - [ ] Abrir PR relacionando as issues #1, #2, #3
-- [ ] **6. Barreira de Aprovação do PR (Hard Stop)**
-    - [ ] Aguardar feedback do usuário
-- [ ] **7. Manutenção de Planos (Finalização)**
-    - [ ] Mover plano para `backup/Executados/` com Pós-Mortem
+- [x] **5. Commit e Pull Request**
+    - [x] Criar commits estruturados: Commited feat(issue-1-2-3).
+    - [x] Abrir PR relacionando as issues #1, #2, #3: PR #4 criado em https://github.com/EuThiagoAndrade/File2MD/pull/4.
+- [x] **6. Barreira de Aprovação do PR (Hard Stop)**
+    - [x] Aguardar feedback do usuário: Aprovado pelo usuário.
+- [x] **7. Manutenção de Planos (Finalização)**
+    - [x] Mover plano para `backup/Executados/` com Pós-Mortem: Plano movido e finalizado com sucesso.

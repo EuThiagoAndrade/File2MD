@@ -239,3 +239,11 @@ O `README.md` original (99 linhas) é escrito inteiramente em Português. Conté
 - **Data de conclusão**: YYYY-MM-DD
 - **Desvios do plano**: [breve descrição ou "nenhum"]
 - **Issues imprevistas durante execução**: [breve ou "nenhuma"]
+
+---
+## P�s-Mortem (gerado automaticamente)
+- **PR**: #4
+- **Data de conclus�o**: 2026-05-21
+- **Desvios do plano**: Nenhum
+- **Issues imprevistas durante execu��o**: Nenhuma
+
