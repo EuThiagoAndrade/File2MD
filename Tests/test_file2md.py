@@ -64,5 +64,34 @@ class TestFile2MDConfig(unittest.TestCase):
         config = File2MD.load_config()
         self.assertEqual(config, {})
 
+    def test_default_language_is_pt(self):
+        """Valida se o idioma padrão inicial é PT."""
+        self.assertEqual(File2MD._CURRENT_LANG, "pt")
+
+    def test_set_language_valid(self):
+        """Valida que definir um idioma válido altera _CURRENT_LANG."""
+        File2MD.set_language("en")
+        self.assertEqual(File2MD._CURRENT_LANG, "en")
+        File2MD.set_language("pt")
+        self.assertEqual(File2MD._CURRENT_LANG, "pt")
+
+    def test_set_language_invalid_fallback(self):
+        """Valida que definir um idioma inválido faz fallback para PT."""
+        File2MD.set_language("en")
+        File2MD.set_language("es")  # inválido
+        self.assertEqual(File2MD._CURRENT_LANG, "pt")
+
+    def test_t_translation_lookup(self):
+        """Valida a tradução de chaves conhecidas em PT e EN."""
+        File2MD.set_language("pt")
+        self.assertEqual(File2MD._t("menu_sair"), "0. Sair")
+        
+        File2MD.set_language("en")
+        self.assertEqual(File2MD._t("menu_sair"), "0. Exit")
+
+    def test_t_fallback_key_itself(self):
+        """Valida que uma chave inexistente no dicionário retorna ela mesma."""
+        self.assertEqual(File2MD._t("chave_inexistente_123"), "chave_inexistente_123")
+
 if __name__ == '__main__':
     unittest.main()

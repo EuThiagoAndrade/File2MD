@@ -1,0 +1,34 @@
+# Tarefas de Implementação — Suporte Bilíngue (#1, #2, #3)
+
+- [x] **0. Diagnóstico Inicial Obrigatório**
+    - [x] Ler as issues #1, #2, #3 no GitHub
+    - [x] Ler plano local `backup/Plan/SuporteBilingue_#1_#2_#3.md`
+    - [x] Atualizar status do plano para `Status: Em Execução`
+- [x] **1. Planejamento Executável**
+    - [x] Mapear arquivos-alvo e escopo:
+        - **Arquivos-alvo**: `Scripts/File2MD.py` (Core, TUI), `README.md` (Docs), `README_en.md` (Docs).
+        - **Camadas**: `core`, `tui`, `docs`.
+        - **Itens obrigatórios**: Dicionário global de traduções, função auxiliar `_t`, dinamicidade de strings no script principal, opção 10 no menu TUI, teclas 'i'/'I' no watcher de entrada, persistência de idioma nas configurações, links no README.md, tradução completa no README_en.md.
+        - **Fora do escopo**: Traduções de erros externos de bibliotecas, outros idiomas além de PT e EN.
+- [x] **2. Preparação do Ambiente**
+    - [x] Criar branch `feature/issue-1-2-3`
+- [x] **3. Implementação Condicional por Camada**
+    - [x] **Python Core & TUI (Issue #1 & #2)**: Modificar `Scripts/File2MD.py`
+        - [x] Adicionar dicionário `TRANSLATIONS` e helper `_t()`
+        - [x] Substituir strings estáticas por `_t()`
+        - [x] Carregar idioma do config no início
+        - [x] Adicionar opção 10 no menu e mapear teclas 'I' / 'i'
+        - [x] Salvar idioma selecionado no config
+    - [x] **Documentação (Issue #3)**:
+        - [x] Modificar `README.md` (links de idioma)
+        - [x] Criar `README_en.md` (versão em inglês)
+- [x] **4. Auditoria Obrigatória (Governance)**
+    - [x] Executar smoke test / testes locais: Executado suite de testes do python (8 testes passando).
+    - [x] Validar integridade com `@governance-check` (ou regras equivalentes): Validado manualmente a inexistência de quebras de imports ou problemas de codificação. Modificações respeitando o estilo estrito do projeto.
+- [ ] **5. Commit e Pull Request**
+    - [ ] Criar commits estruturados
+    - [ ] Abrir PR relacionando as issues #1, #2, #3
+- [ ] **6. Barreira de Aprovação do PR (Hard Stop)**
+    - [ ] Aguardar feedback do usuário
+- [ ] **7. Manutenção de Planos (Finalização)**
+    - [ ] Mover plano para `backup/Executados/` com Pós-Mortem
