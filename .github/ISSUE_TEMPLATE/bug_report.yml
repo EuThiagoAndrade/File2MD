@@ -8,7 +8,7 @@ body:
     attributes:
       label: Descrição do bug
       description: O que aconteceu e qual o comportamento esperado?
-      placeholder: Ex: Ao rodar em modo monitoramento de pasta, a conversão falha com UnicodeDecodeError...
+      placeholder: "Ex: Ao rodar em modo monitoramento de pasta, a conversão falha com UnicodeDecodeError..."
     validations:
       required: true
   - type: textarea
@@ -33,7 +33,7 @@ body:
     id: notes
     attributes:
       label: Notas adicionais
-      placeholder: Ex: Testado no terminal do Windows (cmd.exe) e PowerShell Core...
+      placeholder: "Ex: Testado no terminal do Windows (cmd.exe) e PowerShell Core..."
     validations:
       required: false
   - type: textarea

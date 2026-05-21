@@ -8,7 +8,7 @@ body:
     attributes:
       label: Objetivo
       description: O que esta manutenção técnica realiza?
-      placeholder: Ex: Adicionar suite de testes para CLI, atualizar dependência markitdown...
+      placeholder: "Ex: Adicionar suite de testes para CLI, atualizar dependência markitdown..."
     validations:
       required: true
   - type: textarea
@@ -31,7 +31,7 @@ body:
     attributes:
       label: Impacto
       description: Qual o impacto desta mudança no código ou comportamento geral?
-      placeholder: Ex: Aumentará a cobertura de testes locais de 0% para 40%...
+      placeholder: "Ex: Aumentará a cobertura de testes locais de 0% para 40%..."
     validations:
       required: true
   - type: textarea
