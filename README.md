@@ -6,6 +6,10 @@
   </picture>
 </p>
 
+<p align="center">
+  🇧🇷 <a href="README.md">Leia em Português</a> | 🇺🇸 <a href="README_en.md">Read in English</a>
+</p>
+
 # File2MD - Manual de Utilização
 
 Este script é um "wrapper" em Python para a ferramenta **MarkItDown**, projetado para facilitar a conversão de diversos formatos de arquivos para Markdown de maneira rápida e organizada.
@@ -54,6 +58,7 @@ python Scripts/File2MD.py
 *   **6. Configuração de IA**: Integre com OpenAI ou modelos locais para descrição de imagens e áudio.
 *   **7. Limpeza de Metadados YAML**: Controle visual se os metadados serão removidos ou mantidos.
 *   **8. Definir Pasta de Saída**: Configuração de pasta padrão para salvar os arquivos gerados.
+*   **Idioma / Language**: Alternância dinâmica de idioma (Português e Inglês) no menu interativo com persistência automática.
 
 ---
 
