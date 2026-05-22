@@ -60,10 +60,12 @@ Antes de concluir, confira para cada arquivo editado:
 - [ ] Os **comandos do console** documentados estão corretos e executáveis?
 - [ ] Não houve **duplicação** de seções já existentes?
 - [ ] A edição foi feita de forma **cirúrgica** (sem reescrever partes não relacionadas)?
+- [ ] A codificação original do arquivo foi mantida como **UTF-8 sem BOM** (sem introduzir corrupção de acentos por causa de scripts ou comandos ANSI)?
 
 ---
 
 # Formatação
+* Codificação: Sempre UTF-8 sem BOM.
 * Tabelas Markdown: Sempre alinhadas.
 * Código: Sempre em blocos com highlight de linguagem (```powershell, ```python).
 

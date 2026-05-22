@@ -74,6 +74,7 @@ Confira para cada arquivo editado:
 - [ ] Comandos documentados estão corretos e executáveis no terminal?
 - [ ] Não houve duplicação de seções?
 - [ ] Edição foi cirúrgica (sem alterar partes não relacionadas)?
+- [ ] A codificação foi preservada em **UTF-8 sem BOM** (sem caracteres corrompidos em acentos)?
 
 ---
 

@@ -148,3 +148,6 @@ Após a aprovação do usuário e conclusão da tarefa, o agente deve mover o ar
 - **Desvios do plano**: [breve descrição ou "nenhum"]
 - **Issues imprevistas durante execução**: [breve ou "nenhuma"]
 ```
+
+> [!IMPORTANT]
+> **Aviso de Codificação (UTF-8)**: Ao atualizar ou anexar o bloco de Pós-Mortem (passo 7), certifique-se de que a escrita seja feita em **UTF-8 sem BOM**. Se estiver em ambiente Windows e for utilizar cmdlets do PowerShell (como `Add-Content` ou `Out-File`), adicione obrigatoriamente a flag `-Encoding utf8` no comando (ex: `Add-Content -Path "..." -Encoding utf8 -Value "..."`).

@@ -58,3 +58,8 @@ Este arquivo define regras mandatórias para qualquer agente ou modelo de IA (An
 - **Gate de Qualidade**: O agente não deve criar issues (`@[/criar_issues]`) baseadas em rascunhos. O plano deve estar com `Status: Aprovado` após passar pelo `@[/revisar_plano]`.
 - **Rastreabilidade Local**: O arquivo em `backup/Plan/` é a autoridade máxima de implementação. Se houver divergência entre o que o usuário disse no passado e o que está no plano Aprovado, o plano prevalece (ou deve ser revisado).
 - **Template Canônico**: O plano DEVE seguir o template em `.agent/templates/plano_implementacao.md`. Seções do template não devem ser omitidas.
+
+## 10. Codificação e Manipulação de Arquivos
+- **UTF-8 Obrigatório**: Todos os arquivos criados ou modificados no repositório (código Python, documentações Markdown, configurações JSON/YAML) devem ser salvos estritamente em **UTF-8 sem BOM**.
+- **Segurança de Ferramentas de Escrita**: Dê preferência absoluta às ferramentas nativas de escrita/edição de arquivos do agente (`write_to_file`, `replace_file_content`).
+- **Restrição de Comandos de Shell**: Evite usar comandos genéricos de redirecionamento ou escrita do terminal (como `>` ou cmdlets do PowerShell como `Add-Content` ou `Out-File` sem parâmetros explícitos de encoding). Se for estritamente necessário usar PowerShell para manipulação de arquivos, adicione sempre a flag `-Encoding utf8` de forma explícita.
