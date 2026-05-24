@@ -111,7 +111,7 @@ Preencha o cabeçalho do template:
 Para **cada item técnico** do plano, preencha o bloco completo:
 
 ```markdown
-## Item N — [Nome da Função ou Módulo Principal]
+### 4.X Item N — [Nome da Função ou Módulo Principal]
 
 **Contexto:** [Por que esta alteração é necessária? Qual o problema atual?
 Seja específico: mencione nome de função, linha aproximada, comportamento atual vs. esperado.]

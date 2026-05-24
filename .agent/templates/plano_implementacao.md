@@ -43,7 +43,7 @@
 
 ## 4. Detalhamento Técnico por Item
 
-## Item 1 — [Nome do Módulo ou Função Core]
+### 4.1 Item 1 — [Nome do Módulo ou Função Core]
 
 **Contexto:**
 [Explique o problema no código atual, citando nomes de funções ou comportamentos.]
@@ -65,7 +65,7 @@
 
 ---
 
-## Item 2 — [Nome da Tela ou Painel da TUI]
+### 4.2 Item 2 — [Nome da Tela ou Painel da TUI]
 
 **Contexto:**
 [Explique a mudança na interface de terminal ou navegação do menu.]
@@ -116,8 +116,10 @@
 
 ---
 
-## 6. Pós-Mortem (Preenchido automaticamente ao finalizar)
-- **PR**: #XX
-- **Data de conclusão**: YYYY-MM-DD
-- **Desvios do plano**: [breve descrição ou "nenhum"]
-- **Issues imprevistas durante execução**: [breve ou "nenhuma"]
+## 6. Pós-Mortem (Preenchido progressivamente)
+> *(Nota para o Agente: Cada PR associado a este plano deve adicionar um novo tópico principal aqui. Não sobrescreva PRs anteriores e NÃO concatene blocos inteiros novos com "## 6. Pós-Mortem" no fim do arquivo. Edite esta seção.)*
+
+* **PR #XX (Issue Y):**
+  - **Data de conclusão**: YYYY-MM-DD
+  - **Desvios do plano**: [breve descrição ou "nenhum"]
+  - **Issues imprevistas**: [breve ou "nenhuma"]

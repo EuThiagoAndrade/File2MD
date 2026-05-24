@@ -3,7 +3,7 @@ description: Implementar uma issue do GitHub com branch, validação e Pull Requ
 ---
 
 > [!IMPORTANT]
-> **MODO ESTRITO**: Ao ser invocado por `@[/implementar_issue]`, o agente DEVE iniciar sua resposta com: *"Protocolo Implementador ativado."*. Em seguida, DEVE criar ou atualizar o arquivo `.agent/task.md` listando as etapas principais deste workflow como pendentes `[ ]`.
+> **MODO ESTRITO**: Ao ser invocado por `@[/implementar_issue]`, o agente DEVE iniciar sua resposta com: *"Protocolo Implementador ativado."*. Em seguida, DEVE criar o log de execução copiando o conteúdo de `.agent/templates/task.md` para `backup/Executados/Task_Issue_<numero>.md` (ou `Task_<Nome_do_Plano>.md`), listando as etapas principais deste workflow como pendentes `[ ]`.
 
 # Implementador de Issues (Issue to PR)
 
@@ -42,7 +42,7 @@ Extraia e registre:
 
 ## 1. Planejamento Executável
 
-Antes de editar arquivos, produza um checklist curto de execução no `task.md` com:
+Antes de editar arquivos, preencha o checklist de execução no arquivo de Task gerado (`backup/Executados/Task_...md`) com:
 - arquivos-alvo;
 - camadas afetadas (`core`, `tui`, `docs`);
 - itens obrigatórios e itens fora de escopo.
@@ -136,18 +136,23 @@ PAUSE a execução. Apresente o link do PR (ou a intenção de criá-lo, caso ap
 
 ## 7. Manutenção de Planos (Finalização)
 
-Após a aprovação do usuário e conclusão da tarefa, o agente deve mover o arquivo de plano de `backup/Plan/` para `backup/Executados/`, mantendo a pasta de pendências limpa.
+Após a aprovação do usuário e a criação do PR, o agente DEVE atualizar o plano de implementação associado:
 
-**Pós-Mortem Automático:** Ao mover o plano para `backup/Executados/`, o agente **DEVE** adicionar um bloco de fechamento abaixo no final do arquivo:
-
+**1. Pós-Mortem Progressivo:**
+O agente deve usar ferramentas de substituição de texto (`replace_file_content` ou `multi_replace_file_content`) para encontrar a seção `## 6. Pós-Mortem` já existente no plano, e inserir os dados da issue atual como um novo bullet point ou subtópico dentro dela.
+**PROIBIDO** usar ferramentas genéricas de append de shell (como `>>`) ou adicionar um novo bloco no fim do arquivo, para não duplicar cabeçalhos.
+Formato sugerido para a adição dentro da seção 6:
 ```markdown
----
-## Pós-Mortem (gerado automaticamente)
-- **PR**: #XX
-- **Data de conclusão**: YYYY-MM-DD
-- **Desvios do plano**: [breve descrição ou "nenhum"]
-- **Issues imprevistas durante execução**: [breve ou "nenhuma"]
+* **PR #XX (Issue Y):**
+  - **Data de conclusão**: YYYY-MM-DD
+  - **Desvios do plano**: [breve descrição ou "nenhum"]
+  - **Issues imprevistas**: [breve ou "nenhuma"]
 ```
+
+**2. Ciclo de Vida do Plano (MCP Check):**
+O agente DEVE usar o MCP do GitHub para verificar o status de todas as issues listadas naquele plano.
+* **Se existirem outras issues pendentes:** O arquivo deve continuar na pasta `backup/Plan/` e a linha superior do cabeçalho deve ser garantida como `> **Status:** Em Execução`.
+* **Se for a ÚLTIMA issue do plano (ou issue única):** Mudar a linha superior do plano para `> **Status:** Executado` e mover o arquivo de plano para a pasta `backup/Executados/`.
 
 > [!IMPORTANT]
 > **Aviso de Codificação (UTF-8)**: Ao atualizar ou anexar o bloco de Pós-Mortem (passo 7), certifique-se de que a escrita seja feita em **UTF-8 sem BOM**. Se estiver em ambiente Windows e for utilizar cmdlets do PowerShell (como `Add-Content` ou `Out-File`), adicione obrigatoriamente a flag `-Encoding utf8` no comando (ex: `Add-Content -Path "..." -Encoding utf8 -Value "..."`).
