@@ -1,9 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset=".assets/Logo_branco.svg">
-    <source media="(prefers-color-scheme: light)" srcset=".assets/Logo_preto.svg">
-    <img alt="File2MD Logo" src=".assets/Logo_preto.svg" width="400">
-  </picture>
+  <img alt="File2MD Logo" src=".assets/Logo_verde_borda.svg" width="400">
 </p>
 
 <p align="center">
