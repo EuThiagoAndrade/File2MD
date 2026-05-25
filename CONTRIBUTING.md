@@ -1,6 +1,13 @@
 # Como Contribuir
 
-Obrigado pelo interesse em contribuir com o File2MD! Por favor, siga as instruções abaixo:
+Obrigado pelo interesse em contribuir com o File2MD! Para mantermos o projeto organizado, pedimos que siga as orientações abaixo:
+
+## 💡 Antes de codificar (Discussões)
+
+- **Novas Funcionalidades ou Mudanças Significativas:** Antes de iniciar o desenvolvimento, abra um tópico na aba [Discussions](https://github.com/EuThiagoAndrade/File2MD/discussions) do repositório. Queremos alinhar a ideia com você antes que gaste tempo codificando!
+- **Pequenos Ajustes (Typos, Links, Bugs simples):** Sinta-se livre para abrir uma Issue ou Pull Request diretamente.
+
+## Passo a Passo para o Pull Request
 
 1. Faça um Fork do repositório.
 2. Crie uma branch para suas alterações (`git checkout -b minha-feature`).
