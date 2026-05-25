@@ -6,6 +6,22 @@
   🇧🇷 <a href="README.md">Leia em Português</a> | 🇺🇸 <a href="README_en.md">Read in English</a>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.7+-blue.svg?style=flat-square" alt="Python 3.7+">
+  <a href="https://github.com/EuThiagoAndrade/File2MD/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT">
+  </a>
+  <a href="https://github.com/EuThiagoAndrade/File2MD/commits/main">
+    <img src="https://img.shields.io/github/last-commit/EuThiagoAndrade/File2MD?style=flat-square" alt="Last Commit">
+  </a>
+  <a href="https://github.com/EuThiagoAndrade/File2MD/issues">
+    <img src="https://img.shields.io/github/issues/EuThiagoAndrade/File2MD?style=flat-square" alt="Open Issues">
+  </a>
+  <a href="https://github.com/EuThiagoAndrade/File2MD/stargazers">
+    <img src="https://img.shields.io/github/stars/EuThiagoAndrade/File2MD?style=flat-square" alt="Stars">
+  </a>
+</p>
+
 # File2MD - Manual de Utilização
 
 Este script é um "wrapper" em Python para a ferramenta **MarkItDown**, projetado para facilitar a conversão de diversos formatos de arquivos para Markdown de maneira rápida e organizada.
@@ -97,3 +113,14 @@ Se você preferir não usar o menu e invocar o script diretamente via terminal, 
 | `-h`, `--help` | Mostra a ajuda oficial do script com todos os comandos. | `python Scripts/File2MD.py --help` |
 
 ---
+
+## Contato / Contact
+
+Tem alguma dúvida, sugestão ou precisa de ajuda?
+- **Discussões gerais e ideias:** Acesse o [GitHub Discussions](https://github.com/EuThiagoAndrade/File2MD/discussions) do projeto.
+- **Contato direto (E-mail):** [contato@euthiagoandrade.com.br](mailto:contato@euthiagoandrade.com.br)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Support-GitHub-black?style=flat-square" alt="Support">
+  <img src="https://img.shields.io/badge/Contact-Email-blue?style=flat-square" alt="Email">
+</p>
