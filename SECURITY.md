@@ -1,6 +1,6 @@
-# Política de Segurança (Security Policy)
+# Política de Segurança
 
-## Versões Suportadas (Supported Versions)
+## Versões Suportadas
 
 Atualmente, apenas a versão mais recente na branch `main` recebe atualizações de segurança.
 
@@ -9,7 +9,7 @@ Atualmente, apenas a versão mais recente na branch `main` recebe atualizações
 | `main` | ✅ Sim |
 | Anteriores | ❌ Não |
 
-## Como Reportar uma Vulnerabilidade (Reporting a Vulnerability)
+## Como Reportar uma Vulnerabilidade
 
 Por favor, **NÃO** abra uma Issue pública no GitHub para relatar problemas de segurança.
 

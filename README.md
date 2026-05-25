@@ -28,6 +28,22 @@ Este script é um "wrapper" em Python para a ferramenta **MarkItDown**, projetad
 
 ---
 
+## Interface do Software
+
+<p align="center">
+  <img src=".assets/Tela1_portugues.png" alt="Captura de tela do menu interativo do File2MD">
+  <br>
+  <em>Captura de tela do menu interativo do software.</em>
+</p>
+
+<p align="center">
+  <img src=".assets/Tela2_portugues.png" alt="Captura de tela das opções avançadas do File2MD">
+  <br>
+  <em>Captura de tela das opções avançadas do software.</em>
+</p>
+
+---
+
 ## Pré-requisitos
 
 Para utilizar este script, você precisa de:
@@ -114,13 +130,8 @@ Se você preferir não usar o menu e invocar o script diretamente via terminal, 
 
 ---
 
-## Contato / Contact
+## Contato
 
 Tem alguma dúvida, sugestão ou precisa de ajuda?
 - **Discussões gerais e ideias:** Acesse o [GitHub Discussions](https://github.com/EuThiagoAndrade/File2MD/discussions) do projeto.
 - **Contato direto (E-mail):** [contato@euthiagoandrade.com.br](mailto:contato@euthiagoandrade.com.br)
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Support-GitHub-black?style=flat-square" alt="Support">
-  <img src="https://img.shields.io/badge/Contact-Email-blue?style=flat-square" alt="Email">
-</p>

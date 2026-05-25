@@ -28,6 +28,22 @@ This script is a Python "wrapper" for the **MarkItDown** tool, designed to facil
 
 ---
 
+## Software Interface
+
+<p align="center">
+  <img src=".assets/Tela1_ingles.png" alt="File2MD interactive menu screenshot">
+  <br>
+  <em>Screenshot of the interactive software menu.</em>
+</p>
+
+<p align="center">
+  <img src=".assets/Tela2_ingles.png" alt="File2MD advanced options screenshot">
+  <br>
+  <em>Screenshot of the advanced software options.</em>
+</p>
+
+---
+
 ## Prerequisites
 
 To use this script, you need:
@@ -114,7 +130,7 @@ If you prefer not to use the menu and invoke the script directly via terminal, h
 
 ---
 
-## Contact / Support
+## Contact
 
 Have any questions, suggestions, or need help?
 - **General discussions and ideas:** Access the project's [GitHub Discussions](https://github.com/EuThiagoAndrade/File2MD/discussions).
