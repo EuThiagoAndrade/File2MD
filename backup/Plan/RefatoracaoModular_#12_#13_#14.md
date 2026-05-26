@@ -1,6 +1,6 @@
 # Plano de Implementação — Refatoração de Arquitetura e Reestruturação do Menu Principal
 
-> **Status:** Em Execução
+> **Status:** Concluído
 > **Data de criação:** 2026-05-26
 > **Última atualização:** 2026-05-26
 > **Autor:** Thiago Andrade
@@ -275,6 +275,10 @@ Nenhuma dependência externa nova. Todas as bibliotecas (`rich`, `watchdog`, `py
   - **Desvios do plano**: nenhum
   - **Issues imprevistas**: nenhuma
 * **PR #16 (Issue #13):**
+  - **Data de conclusão**: 2026-05-26
+  - **Desvios do plano**: nenhum
+  - **Issues imprevistas**: nenhuma
+* **PR #17 (Issue #14):**
   - **Data de conclusão**: 2026-05-26
   - **Desvios do plano**: nenhum
   - **Issues imprevistas**: nenhuma

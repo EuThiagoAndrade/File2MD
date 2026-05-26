@@ -13,9 +13,9 @@
 - [x] Passo 2 — Preparação do Ambiente (Criar Branch `chore/issue-14`)
 - [x] Passo 3 — Implementação (Limpar e adaptar `File2MD.py` para entrypoint mínimo)
 - [x] Passo 4 — Auditoria Obrigatória (`@governance-check`)
-- [/] Passo 5 — Commit e Pull Request da Issue 14
-- [ ] Passo 6 — Barreira de Aprovação (Confirmação Humana)
-- [ ] Passo 7 — Manutenção de Planos (Ciclo de vida e Pós-Mortem)
+- [x] Passo 5 — Commit e Pull Request da Issue 14
+- [x] Passo 6 — Barreira de Aprovação (Confirmação Humana)
+- [x] Passo 7 — Manutenção de Planos (Ciclo de vida e Pós-Mortem)
 
 ---
 
@@ -50,5 +50,5 @@ Recomendação: Pode abrir PR
 ## Resultado
 
 > _Preenchido ao final da execução._
-> **Status:** Em Execução
-> **Resumo:** [breve resumo do que foi feito]
+> **Status:** Concluído
+> **Resumo:** O monolito `File2MD.py` foi reduzido com sucesso para cerca de 65 linhas. Fachadas de compatibilidade foram implementadas de forma a garantir que toda a suíte de testes unitários passasse sem quebras. PR #17 aberto no GitHub.
