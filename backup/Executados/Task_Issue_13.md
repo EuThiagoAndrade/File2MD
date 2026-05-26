@@ -13,9 +13,9 @@
 - [x] Passo 2 — Preparação do Ambiente (Criar Branch `feature/issue-13`)
 - [x] Passo 3 — Implementação (Criar pacote `ui`, migrar componentes de UI e loop de menus)
 - [x] Passo 4 — Auditoria Obrigatória (`@governance-check`)
-- [/] Passo 5 — Commit e Pull Request da Issue 13
-- [ ] Passo 6 — Barreira de Aprovação (Confirmação Humana)
-- [ ] Passo 7 — Manutenção de Planos (Ciclo de vida e Pós-Mortem)
+- [x] Passo 5 — Commit e Pull Request da Issue 13
+- [x] Passo 6 — Barreira de Aprovação (Confirmação Humana)
+- [x] Passo 7 — Manutenção de Planos (Ciclo de vida e Pós-Mortem)
 
 ---
 
@@ -55,5 +55,5 @@ Recomendação: Pode abrir PR
 ## Resultado
 
 > _Preenchido ao final da execução._
-> **Status:** Em Execução
-> **Resumo:** [breve resumo do que foi feito]
+> **Status:** Concluído
+> **Resumo:** Reestruturação da UI implementada com sucesso com a criação de um menu de ações principal e um submenu de configurações. PR #16 aberto e mergeado localmente.

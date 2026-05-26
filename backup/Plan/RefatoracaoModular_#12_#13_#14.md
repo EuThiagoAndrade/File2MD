@@ -274,3 +274,7 @@ Nenhuma dependência externa nova. Todas as bibliotecas (`rich`, `watchdog`, `py
   - **Data de conclusão**: 2026-05-26
   - **Desvios do plano**: nenhum
   - **Issues imprevistas**: nenhuma
+* **PR #16 (Issue #13):**
+  - **Data de conclusão**: 2026-05-26
+  - **Desvios do plano**: nenhum
+  - **Issues imprevistas**: nenhuma
