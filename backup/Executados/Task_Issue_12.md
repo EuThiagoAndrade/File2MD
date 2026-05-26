@@ -13,9 +13,9 @@
 - [x] Passo 2 — Preparação do Ambiente (Criar Branch `chore/issue-12`)
 - [x] Passo 3 — Implementação (Criar pacotes `core` e `utils`, extrair lógicas de `File2MD.py`)
 - [x] Passo 4 — Auditoria Obrigatória (`@governance-check`)
-- [/] Passo 5 — Commit e Pull Request da Issue 12
-- [ ] Passo 6 — Barreira de Aprovação (Confirmação Humana)
-- [ ] Passo 7 — Manutenção de Planos (Ciclo de vida e Pós-Mortem)
+- [x] Passo 5 — Commit e Pull Request da Issue 12
+- [x] Passo 6 — Barreira de Aprovação (Confirmação Humana)
+- [x] Passo 7 — Manutenção de Planos (Ciclo de vida e Pós-Mortem)
 
 ---
 
@@ -58,5 +58,5 @@ Recomendação: Pode abrir PR
 ## Resultado
 
 > _Preenchido ao final da execução._
-> **Status:** Em Execução
-> **Resumo:** [breve resumo do que foi feito]
+> **Status:** Concluído
+> **Resumo:** Extraídos com sucesso os módulos de core (`converter`, `watcher`, `postprocess`) e utils (`config_manager`, `i18n`) do monolito, organizando-os em pacotes e adicionando testes de unidade robustos. PR #15 aberto no GitHub e aprovado pelo usuário.

@@ -270,7 +270,7 @@ Nenhuma dependência externa nova. Todas as bibliotecas (`rich`, `watchdog`, `py
 ## 6. Pós-Mortem (Preenchido progressivamente)
 > *(Nota para o Agente: Cada PR associado a este plano deve adicionar um novo tópico principal aqui. Não sobrescreva PRs anteriores e NÃO concatene blocos inteiros novos com "## 6. Pós-Mortem" no fim do arquivo. Edite esta seção.)*
 
-* **PR #XX (Issue Y):**
-  - **Data de conclusão**: YYYY-MM-DD
-  - **Desvios do plano**: [breve descrição ou "nenhum"]
-  - **Issues imprevistas**: [breve ou "nenhuma"]
+* **PR #15 (Issue #12):**
+  - **Data de conclusão**: 2026-05-26
+  - **Desvios do plano**: nenhum
+  - **Issues imprevistas**: nenhuma
